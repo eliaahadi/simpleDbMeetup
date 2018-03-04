@@ -1,17 +1,17 @@
-in terminal:
+#To setup this repository from scratch, here are the steps below:
 
+In your terminal:
 - yarn global add express-generator@4 
 
-add express server in terminal 
-
+Add express server in terminal :
 - express node-postgres-promises
 - cd node-postgres-promises
 - yarn install
-
 - yarn pg-promise@5 --save
 - yarn add bluebird@3 --save
 
-- create queries.js with these contents
+# Create queries file
+Create queries.js with these contents
 
 var promise = require('bluebird');
 
@@ -35,30 +35,37 @@ module.exports = {
 };
 
 
-- create soups.sql
+# Create soups database
+Create soups.sql with this command in terminal
+- psql -f soupsdb.sql
 
-run this command in terminal
-psql -f soupsdb.sql
 
+# Modify app.js
+Add error handling in file as shown.
+
+# Experimenting with database and endpoints
+Run server with
 - yarn start
 
-in new terminal type:
 
-GET
-http://localhost:5000/api/soupsdb
-INSERT
-curl --data "name=Miso&type=Ramen&cuisine=Japanese" http://localhost:5000/api/soupsdb
+Now in new terminal type, to READ database contents, go to:
+- http://localhost:5000/api/soupsdb
 
-UPDATE
+
+To insert into the database and view at http://localhost:5000/api/soupsdb, type in terminal:
+- curl --data "name=Miso&type=Ramen&cuisine=Japanese" http://localhost:5000/api/soupsdb
+
+To update into the database and view at http://localhost:5000/api/soupsdb, type in terminal:
 curl -X PUT --data "name=Shoyu&type=Ramen&cuisine=Japanese" http://127.0.0.1:5000/api/soupsdb/1
 
-DELETE
+To delete from the database and view at http://localhost:5000/api/soupsdb, type in terminal:
 curl -X DELETE http://127.0.0.1:5000/api/soupsdb/1
 
-in postman
 
-POST
-http://127.0.0.1:5000/api/soups/
+# Postman software
+3rd party exists where you can modify the database through them. An example I used is [Postman located here for download](https://www.getpostman.com/). In Postman, put in the URL http://127.0.0.1:5000/api/soups/ and experiment with the POST (CREATE), GET (READ), PUT (UPDATE), DEL (DELETE) methods. 
+
+For example, POST is written in http://127.0.0.1:5000/api/soups/ and added as JSON data shown below. If post works, status of successful will output.
 
 {
     "id": 1,
