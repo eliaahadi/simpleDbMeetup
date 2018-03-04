@@ -57,6 +57,7 @@ View [here for more PSQL functions](https://www.tutorialspoint.com/postgresql/in
 - [PSQL docs](https://www.postgresql.org/docs/9.6/static/index.html)
 - [PSQL tutorial](http://www.postgresqltutorial.com/)
 - [StackOverflow](https://stackoverflow.com/)
+- [Node & PG Integration Tutorial](http://mherman.org/blog/2016/03/13/designing-a-restful-api-with-node-and-postgres/)
 
 # Contact Information
 - [LinkedIn](https://www.linkedin.com/in/eliaahadi/)
