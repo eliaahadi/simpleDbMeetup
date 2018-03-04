@@ -18,6 +18,9 @@ Now in the directory of the cloned folder, link dependencies by typing in termin
 In terminal, type:
 - psql -f soupsdb.sql
 
+# Run Web server
+In terminal, type:
+- yarn start
 
 # Basic Tasks in PSQL
 
