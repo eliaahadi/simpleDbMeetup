@@ -4,11 +4,11 @@ var router = express.Router();
 var db = require('../queries');
 
 
-router.get('/api/soupsdb', db.getAllSoups);
-router.get('/api/soupsdb/:id', db.getSingleSoup);
-router.post('/api/soupsdb', db.createSoup);
-router.put('/api/soupsdb/:id', db.updateSoup);
-router.delete('/api/soupsdb/:id', db.removeSoup);
+router.get('/api/soups', db.getAllSoups);   //read all soups
+router.get('/api/soups/:id', db.getSingleSoup); //read a single soup
+router.post('/api/soups', db.createSoup); //insert a soup
+router.put('/api/soups/:id', db.updateSoup);  //update a soup
+router.delete('/api/soups/:id', db.removeSoup); //remove a soup
 
 
 module.exports = router;

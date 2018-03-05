@@ -43,13 +43,13 @@ INSERT INTO soups (name, type, cuisine)
 SELECT * FROM soups;
 
 ## Update a row (Update)
-UPDATE soups set name='Shoyu', type='Ramen', cuisine='Japanese' where id=1;
+UPDATE soups SET name='Shoyu', type='Ramen', cuisine='Japanese' WHERE id=1;
 
 ## Delete a row (Delete)
 DELETE FROM soups WHERE id =1;
 
 # Advanced Tasks
-View [here for more PSQL functions](https://www.tutorialspoint.com/postgresql/index.htm).
+View [here for more PSQL functions](https://www.tutorialspoint.com/postgresql/index.html).
 
 # Resources
 - [Yarn Package Manager](https://yarnpkg.com/en/docs/install)

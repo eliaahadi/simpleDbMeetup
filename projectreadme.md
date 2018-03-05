@@ -49,23 +49,23 @@ Run server with
 
 
 Now in new terminal type, to READ database contents, go to:
-- http://localhost:5000/api/soupsdb
+- http://localhost:5000/api/soups
 
 
-To insert into the database and view at http://localhost:5000/api/soupsdb, type in terminal:
-- curl --data "name=Miso&type=Ramen&cuisine=Japanese" http://localhost:5000/api/soupsdb
+To insert into the database and view at http://localhost:5000/api/soups, type in terminal:
+- curl --data "name=Miso&type=Ramen&cuisine=Japanese" http://localhost:5000/api/soups
 
-To update into the database and view at http://localhost:5000/api/soupsdb, type in terminal:
-curl -X PUT --data "name=Shoyu&type=Ramen&cuisine=Japanese" http://127.0.0.1:5000/api/soupsdb/1
+To update into the database and view at http://localhost:5000/api/soups, type in terminal:
+curl -X PUT --data "name=Shoyu&type=Ramen&cuisine=Japanese" http://localhost:5000/api/soups/1
 
-To delete from the database and view at http://localhost:5000/api/soupsdb, type in terminal:
-curl -X DELETE http://127.0.0.1:5000/api/soupsdb/1
+To delete from the database and view at http://localhost:5000/api/soups, type in terminal:
+curl -X DELETE http://localhost:5000/api/soups/1
 
 
 # Postman software
-3rd party exists where you can modify the database through them. An example I used is [Postman located here for download](https://www.getpostman.com/). In Postman, put in the URL http://127.0.0.1:5000/api/soups/ and experiment with the POST (CREATE), GET (READ), PUT (UPDATE), DEL (DELETE) methods. 
+3rd party exists where you can modify the database through them. An example I used is [Postman located here for download](https://www.getpostman.com/). In Postman, put in the URL http://localhost:5000/api/soups/ and experiment with the POST (CREATE), GET (READ), PUT (UPDATE), DEL (DELETE) methods. 
 
-For example, POST is written in http://127.0.0.1:5000/api/soups/ and added as JSON data shown below. If post works, status of successful will output.
+For example, POST is written in http://localhost:5000/api/soups/ and added as JSON data shown below. If post works, status of successful will output.
 
 {
     "id": 1,
